@@ -1,0 +1,112 @@
+<section class="px-4 py-10 md:px-8 bg-[#2C3E50] space-y-12 text-white font-sans">
+
+  <!-- TÍTULO -->
+  <div class="text-center max-w-3xl mx-auto space-y-4 animate__animated animate__fadeInDown">
+    <h1 class="text-4xl font-bold text-[#E67E22] underline-animate">Prevención del Acoso Escolar</h1>
+    <p class="text-lg">
+      El bullying deja huellas. Aprende cómo identificarlo, prevenirlo y enfrentarlo.
+    </p>
+  </div>
+
+  <!-- BLOQUES -->
+  <div class="max-w-6xl mx-auto grid gap-12 md:grid-cols-2">
+
+    <!-- BLOQUE 1 -->
+    <figure class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center animate-fadeInMove">
+      <img src="/assets/image/bullying.jpg" alt="Qué es bullying" class="w-full md:w-48 h-48 object-cover transition-brillo" />
+      <figcaption class="p-6 md:pl-8 text-center md:text-left text-black">
+        <h2 class="text-2xl font-bold text-[#E67E22] mb-3">¿Qué es el bullying?</h2>
+        <p>
+          Es una forma de agresión intencional y constante, ya sea física, verbal o emocional. Afecta la autoestima y la seguridad de quienes lo sufren, generando consecuencias duraderas en su salud mental y socialización.
+        </p>
+      </figcaption>
+    </figure>
+
+    <!-- BLOQUE 2 -->
+    <figure class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center animate-fadeInMove">
+      <img src="/assets/image/tiposb.jpg" alt="Tipos de bullying" class="w-full md:w-48 h-48 object-cover transition-brillo" />
+      <figcaption class="p-6 md:pl-8 text-center md:text-left text-black">
+        <h2 class="text-2xl font-bold text-[#E67E22] mb-3">Tipos de bullying</h2>
+        <ul class="list-disc list-inside space-y-1 text-base">
+          <li><strong>Físico:</strong> golpes, empujones.</li>
+          <li><strong>Verbal:</strong> insultos, amenazas.</li>
+          <li><strong>Social:</strong> exclusión, difamación.</li>
+          <li><strong>Virtual:</strong> acoso por redes sociales y medios digitales.</li>
+        </ul>
+      </figcaption>
+    </figure>
+
+    <!-- BLOQUE 3 -->
+    <figure class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center animate-fadeInMove">
+      <img src="/assets/image/factores.jpg" alt="Factores bullying" class="w-full md:w-48 h-48 object-cover transition-brillo" />
+      <figcaption class="p-6 md:pl-8 text-center md:text-left text-black">
+        <h2 class="text-2xl font-bold text-[#E67E22] mb-3">Factores que lo provocan</h2>
+        <ul class="list-disc list-inside space-y-1 text-base">
+          <li>Falta de supervisión en casa o escuela.</li>
+          <li>Entornos violentos o insensibles.</li>
+          <li>Modelos negativos en medios y redes.</li>
+          <li>Problemas emocionales sin tratar y falta de apoyo.</li>
+        </ul>
+      </figcaption>
+    </figure>
+
+    <!-- BLOQUE 4 -->
+    <figure class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center animate-fadeInMove">
+      <img src="/assets/image/prevenir.jpg" alt="Prevención bullying" class="w-full md:w-48 h-48 object-cover transition-brillo" />
+      <figcaption class="p-6 md:pl-8 text-center md:text-left text-black">
+        <h2 class="text-2xl font-bold text-[#E67E22] mb-3">¿Cómo prevenirlo y actuar?</h2>
+        <ul class="list-disc list-inside space-y-1 text-base">
+          <li>Habla con empatía y escucha activa a la víctima.</li>
+          <li>Informa y trabaja en conjunto con padres y docentes.</li>
+          <li>Promueve el respeto, la tolerancia y la inclusión en el entorno escolar.</li>
+          <li>Organiza talleres de convivencia y habilidades socioemocionales.</li>
+        </ul>
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <!-- VIDEO FINAL -->
+  <div class="text-center space-y-6 animate__animated animate__fadeInUp max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold text-[#E67E22] underline-animate">Video educativo sobre bullying</h2>
+    <p>
+      Conoce cómo prevenir el acoso escolar con este video explicativo y reflexivo.
+    </p>
+    <iframe
+      class="w-full aspect-video rounded-md shadow mx-auto max-w-3xl"
+      src="https://www.youtube.com/embed/br7syQcNAxE?si=SjoVw40T3jm2ERGA&amp;controls=0&amp;start=1"
+      title="Video bullying"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy"
+    ></iframe>
+  </div>
+
+</section>
+
+<style>
+  .transition-brillo {
+    transition: box-shadow 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.5);
+    filter: brightness(1);
+    border-radius: 0.75rem;
+  }
+  .transition-brillo:hover {
+    box-shadow: 0 8px 30px rgba(230, 126, 34, 0.9);
+    filter: brightness(1.1);
+  }
+  @keyframes fadeInMove {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fadeInMove {
+    animation: fadeInMove 0.7s ease forwards;
+  }
+</style>

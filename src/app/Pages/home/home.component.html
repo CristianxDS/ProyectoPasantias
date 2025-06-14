@@ -1,0 +1,68 @@
+<section class="bg-white min-h-screen flex flex-col items-center justify-center px-4 py-12 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-black mb-4 fade-in">
+    Bienvenido a <span class="text-indigo-800 dark:text-indigo-400">Bienestar Emocional Infantil</span>
+  </h1>
+
+  <p class="text-lg md:text-xl text-gray-900 dark:text-black max-w-2xl mb-6 fade-in-delayed">
+    Un espacio dedicado al crecimiento emocional de niños y jóvenes. Encuentra herramientas, consejos y acompañamiento para fortalecer su bienestar interior.
+  </p>
+
+  <div class="flex flex-wrap justify-center gap-4 fade-in-delayed">
+    <a routerLink="/educacion" class="bg-indigo-700 text-white px-6 py-3 rounded-2xl shadow hover:bg-indigo-800 transition-all">
+      Educación Emocional
+    </a>
+    <a routerLink="/talleres" class="bg-indigo-700 text-white px-6 py-3 rounded-2xl shadow hover:bg-indigo-800 transition-all">
+      Ver Talleres
+    </a>
+  </div>
+
+  <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-gray-900 dark:text-black fade-in-delayed">
+    <div class="flex flex-col items-center">
+      <span routerLink="/emociones" class="text-3xl">💬</span>
+      <a routerLink="/educacion">Emociones</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <span routerLink="/autocuidado" class="text-3xl">🌿</span>
+      <a routerLink="/autocuidado">Autocuidado</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <span routerLink="/bullying" class="text-3xl">🛡️</span>
+      <a routerLink="/bullying">Bullying</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <span routerLink="/comunidad" class="text-3xl">🤝</span>
+      <a routerLink="/comunidad">Comunidad</a>
+    </div>
+  </div>
+
+<div *ngIf="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-lg mx-4 shadow-lg text-left scale-in">
+    <h2 class="text-2xl font-bold mb-4 text-indigo-600 dark:text-indigo-400">
+      Política de Protección de Datos
+    </h2>
+    <p class="mb-4 text-gray-800 dark:text-gray-200">
+      Usamos tus datos para mejorar tu experiencia. Por favor, lee y acepta nuestra política de protección de datos para continuar.
+    </p>
+    <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300">
+      <li>Recolectamos solo datos necesarios.</li>
+      <li>Protegemos tu privacidad con medidas seguras.</li>
+      <li>Podrás revisar o eliminar tus datos en cualquier momento.</li>
+    </ul>
+    <div class="flex justify-end gap-4">
+      <button (click)="acceptPolicy()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded transition">
+        Aceptar
+      </button>
+      <button (click)="declinePolicy()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded transition">
+        Rechazar
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Botón fijo abajo a la derecha -->
+<a 
+  routerLink="/login"
+  class="fixed bottom-6 right-6 bg-indigo-700 text-white px-5 py-3 rounded-full shadow-lg hover:bg-indigo-800 transition-all z-50"
+>
+  🔐 Iniciar Sesión
+</a>
+</section>

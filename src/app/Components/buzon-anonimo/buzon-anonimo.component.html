@@ -1,0 +1,12 @@
+<section class="bg-white p-6 rounded shadow-md max-w-3xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4 text-indigo-700">Buzón Anónimo</h2>
+
+  <textarea [(ngModel)]="mensajeActual" rows="4" placeholder="¿Cómo te sientes? Comparte aquí..." class="w-full p-2 border rounded resize-none"></textarea>
+
+  <button (click)="enviarMensaje()" class="mt-3 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Enviar</button>
+
+  <div *ngFor="let mensaje of mensajes" class="mt-4 p-3 border rounded bg-gray-100">
+    {{ mensaje.contenido }}
+    <div class="text-sm text-gray-500 mt-1">{{ mensaje.fecha | date:'medium' }}</div>
+  </div>
+</section>

@@ -1,0 +1,99 @@
+/* Animación para "apretar" imágenes */
+.img-pressable {
+  transition: transform 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.img-pressable:active {
+  transform: scale(0.95);
+}
+/* Animación para "apretar" imágenes */
+  .img-pressable {
+    transition: transform 0.15s ease-in-out;
+    cursor: pointer;
+  }
+  .img-pressable:active {
+    transform: scale(0.95);
+  }
+
+  /* Animación fade-in simple para los textos */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animación subrayado en títulos al hover */
+  .underline-animate {
+    position: relative;
+    cursor: default;
+  }
+  .underline-animate::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -6px;
+    left: 0;
+    background-color: #6366f1; /* Indigo-500 */
+    transition: width 0.3s ease-in-out;
+  }
+  .underline-animate:hover::after {
+    width: 100%;
+  }
+
+    /* Animación para apretar imágenes */
+  .img-pressable {
+    transition: transform 0.15s ease-in-out;
+    cursor: pointer;
+  }
+  .img-pressable:active {
+    transform: scale(0.95);
+  }
+
+  /* Animación fade-in */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Subrayado animado en títulos */
+  .underline-animate {
+    position: relative;
+    cursor: default;
+  }
+  .underline-animate::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -6px;
+    left: 0;
+    background-color: #6366f1; /* Indigo-500 */
+    transition: width 0.3s ease-in-out;
+  }
+  .underline-animate:hover::after {
+    width: 100%;
+  }
+
+  /* Transición en artículos (cards) al pasar mouse */
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.25); /* Indigo-500 tint */
+  }
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }

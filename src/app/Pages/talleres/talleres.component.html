@@ -1,0 +1,66 @@
+<section class="p-6 lg:p-12 bg-indigo-50 min-h-screen animate__animated animate__fadeInUp">
+  <div class="max-w-5xl mx-auto space-y-6 text-center">
+    <h2 class="text-4xl font-bold text-indigo-900">Talleres y Actividades Interactivas</h2>
+    <p class="text-lg text-gray-700">
+      Participa en <strong>mini-cursos dinámicos</strong> y <strong>juegos interactivos</strong> diseñados para fortalecer el bienestar emocional de niños y adolescentes.
+    </p>
+    <p class="text-lg text-gray-700">
+      Estas actividades están pensadas para aplicarse tanto en <strong>el aula como en el hogar</strong>, promoviendo el autoconocimiento, la empatía, la autorregulación emocional y el trabajo en equipo.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-indigo-400">
+        <h3 class="text-xl font-semibold text-indigo-800 mb-2">Mini-Cursos Emocionales</h3>
+        <p class="text-gray-700">
+          Descubre sesiones breves y lúdicas donde se abordan emociones como la alegría, el miedo o la tristeza, fomentando habilidades sociales y reflexivas en un ambiente seguro.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-indigo-400">
+        <h3 class="text-xl font-semibold text-indigo-800 mb-2">Actividades para Casa o Clase</h3>
+        <p class="text-gray-700">
+          Juegos, retos colaborativos, rincones de calma y ejercicios creativos que pueden adaptarse al entorno familiar o escolar, reforzando la conexión emocional y el autocuidado.
+        </p>
+      </div>
+    </div>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-6">
+  <li 
+    *ngFor="let taller of talleres" 
+    class="w-full max-w-2xl bg-gradient-to-br from-indigo-100 to-blue-200 border border-blue-300 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 mx-auto"
+  >
+    <div class="w-full bg-gray-100 rounded-t-xl overflow-hidden flex justify-center items-center h-48">
+      <img 
+        *ngIf="taller.imagenUrl" 
+        [src]="taller.imagenUrl" 
+        alt="Imagen del taller {{ taller.titulo }}" 
+        class="w-full h-full object-contain"
+      />
+    </div>
+
+    <div class="p-5 space-y-2">
+      <h5 class="text-xl font-semibold text-blue-900 leading-tight">
+        {{ taller.titulo }}
+      </h5>
+
+      <p class="text-base text-gray-800 leading-relaxed">
+        {{ taller.descripcion }}
+      </p>
+
+      <a 
+        *ngIf="taller.pdfUrl" 
+        [href]="taller.pdfUrl" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        download
+        class="inline-block px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700 transition-colors"
+      >
+        📄 DESCARGAR PDF
+      </a>
+    </div>
+  </li>
+</ul>
+
+  </div>
+</section>
+
+

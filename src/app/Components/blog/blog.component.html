@@ -1,0 +1,17 @@
+<section class="bg-white p-6 rounded shadow-md max-w-3xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4 text-indigo-700">Blog para Jóvenes</h2>
+
+  <form (ngSubmit)="agregarPublicacion()" class="space-y-4">
+    <input [(ngModel)]="nuevaPublicacion.titulo" name="titulo" placeholder="Título" class="w-full border p-2 rounded" required>
+    <textarea [(ngModel)]="nuevaPublicacion.contenido" name="contenido" rows="4" placeholder="Contenido" class="w-full border p-2 rounded" required></textarea>
+    <input [(ngModel)]="nuevaPublicacion.autor" name="autor" placeholder="Tu nombre o seudónimo" class="w-full border p-2 rounded" required>
+    <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Publicar</button>
+  </form>
+
+  <div *ngFor="let pub of publicaciones" class="mt-6 border-l-4 border-indigo-400 p-4 bg-gray-50 rounded">
+    <h3 class="text-xl font-semibold">{{ pub.titulo }}</h3>
+    <p class="text-gray-700 mt-1">{{ pub.contenido }}</p>
+    <p class="text-sm text-gray-500 mt-2">Por {{ pub.autor }} – {{ pub.fecha | date:'medium' }}</p>
+  </div>
+</section>
+

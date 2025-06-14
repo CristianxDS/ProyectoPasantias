@@ -1,0 +1,23 @@
+/* Clase para subrayado animado */
+.title-underline {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  color: #4c1d95; /* Puedes cambiar el color para que combine con tu paleta */
+}
+
+.title-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #a78bfa; /* color lila claro */
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.title-underline:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,50 @@
+<nav class="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-800 dark:to-blue-900 shadow-md backdrop-blur-md bg-opacity-80">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <div routerLink="home" class="flex items-center cursor-pointer" (click)="scrollTop()">
+        <img class="h-10 w-auto mr-3" src="https://flowbite.com/docs/images/logo.svg" alt="EmoKids Logo" />
+        <span class="text-3xl font-bold text-gray-800 dark:text-white">EmoKids</span>
+      </div>
+
+
+
+
+      <div class="hidden md:flex space-x-6">
+        <a routerLink="educacion" class="text-gray-800 hover:text-indigo-600 dark:text-gray-200 dark:hover:text-indigo-400 font-medium transition">Educación Emocional</a>
+        <a routerLink="autocuidado" class="text-gray-800 hover:text-green-600 dark:text-gray-200 dark:hover:text-green-400 font-medium transition">Autocuidado</a>
+        <a routerLink="ansiedad" class="text-gray-800 hover:text-purple-600 dark:text-gray-200 dark:hover:text-purple-400 font-medium transition">Ansiedad Escolar</a>
+        <a routerLink="autoestima" class="text-gray-800 hover:text-yellow-500 dark:text-gray-200 dark:hover:text-yellow-300 font-medium transition">Autoestima</a>
+        <a routerLink="bullying" class="text-gray-800 hover:text-rose-600 dark:text-gray-200 dark:hover:text-rose-400 font-medium transition">Bullying</a>
+        <a routerLink="comunidad" class="text-gray-800 hover:text-orange-600 dark:text-gray-200 dark:hover:text-orange-400 font-medium transition">Comunidad</a>
+        <a routerLink="ayuda" class="text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400 font-medium transition">Ayuda</a>
+        <a routerLink="talleres" class="text-gray-800 hover:text-pink-600 dark:text-gray-200 dark:hover:text-pink-400 font-medium transition">Talleres</a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-800 dark:text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2">
+    <a routerLink="educacion" class="block text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium">Educación Emocional</a>
+    <a routerLink="autocuidado" class="block text-gray-800 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 font-medium">Autocuidado</a>
+    <a routerLink="ansiedad" class="block text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium">Ansiedad Escolar</a>
+    <a routerLink="autoestima" class="block text-gray-800 dark:text-gray-200 hover:text-yellow-500 dark:hover:text-yellow-300 font-medium">Autoestima</a>
+    <a routerLink="bullying" class="block text-gray-800 dark:text-gray-200 hover:text-rose-600 dark:hover:text-rose-400 font-medium">Bullying</a>
+    <a routerLink="comunidad" class="block text-gray-800 dark:text-gray-200 hover:text-orange-600 dark:hover:text-orange-400 font-medium">Comunidad</a>
+    <a routerLink="ayuda" class="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium">Ayuda</a>
+    <a routerLink="talleres" class="block text-gray-800 dark:text-gray-200 hover:text-pink-600 dark:hover:text-pink-400 font-medium">Talleres</a>
+  </div>
+</nav>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>

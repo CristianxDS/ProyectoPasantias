@@ -1,0 +1,123 @@
+/* Base y colores para la sección */
+.autoestima-section {
+  background: #fff9db;
+  color: #92400e;
+  animation: floatUpDown 6s ease-in-out infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Animación suave para entrada */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación de carga flotante */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Títulos con línea animada */
+.title-animate,
+.subtitle-animate {
+  position: relative;
+  cursor: default;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+.title-animate:hover,
+.subtitle-animate:hover {
+  color: #fbbf24;
+}
+.title-animate::after,
+.subtitle-animate::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: -8px;
+  left: 0;
+  background-color: #fbbf24;
+  transition: width 0.4s ease;
+}
+.title-animate:hover::after,
+.subtitle-animate:hover::after {
+  width: 100%;
+}
+
+/* Imágenes presionables */
+.img-pressable {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.img-pressable:active {
+  transform: scale(0.95);
+}
+
+/* Efecto hover para cards */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(251, 191, 36, 0.5);
+}
+
+/* Layout títulos con imagen al lado */
+.title-with-img {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.icon-title {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
+  flex-shrink: 0;
+}
+
+/* Espaciado y tipografía */
+.section-block {
+  margin-bottom: 3rem;
+}
+
+.text-yellow-900 {
+  color: #92400e;
+}
+
+/* Listas espaciadas */
+ul.list-disc li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+/* Video styling */
+.video-container iframe {
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 20px rgba(251, 191, 36, 0.3);
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+  .title-with-img {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .icon-title {
+    width: 40px;
+    height: 40px;
+  }
+}
