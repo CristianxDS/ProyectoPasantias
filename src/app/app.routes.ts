@@ -11,6 +11,13 @@ import { TalleresComponent } from './Pages/talleres/talleres.component';
 import { FormulaiotallerComponent } from './Components/formulaiotaller/formulaiotaller.component';
 import { LoginComponent } from './Components/login/login.component';
 
+import { TerminoscondicionesComponent } from './Pages/terminoscondiciones/terminoscondiciones.component';
+import { PoliticaPrivacidadComponent } from './Pages/politica-privacidad/politica-privacidad.component';
+import { MaterialDocenteComponent } from './Pages/material-docente/material-docente.component';
+import { GuiaFamiliasComponent } from './Pages/guia-familias/guia-familias.component';
+
+
+
 export const routes: Routes = [
 { path: 'home', component: HomeComponent },
 { path: 'educacion', component: EducacionEmocionalComponent },
@@ -23,7 +30,10 @@ export const routes: Routes = [
 { path: 'talleres', component: TalleresComponent },
 {path:'formulario',component:FormulaiotallerComponent},
 {path: 'login',component:LoginComponent},
-
+{ path: 'guiafamilias', component: GuiaFamiliasComponent},
+{ path: 'materialdocente', component: MaterialDocenteComponent },
+{ path: 'privacidad', component: PoliticaPrivacidadComponent },
+{ path: 'terminos', component: TerminoscondicionesComponent },
 { path: '', redirectTo: '/home', pathMatch: 'full' },
 
 ];

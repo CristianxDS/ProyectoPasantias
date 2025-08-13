@@ -1,1 +1,66 @@
-<p>ayuda works!</p>
+<section class="bg-gradient-to-b from-rose-50 via-amber-50 to-white">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <header class="text-center mb-10">
+      <span class="inline-block rounded-full bg-rose-100 text-rose-700 px-3 py-1 text-xs font-semibold">Apoyo inmediato</span>
+      <h1 class="mt-3 text-3xl md:text-4xl font-extrabold text-rose-900">¿Necesitas ayuda ahora?</h1>
+      <p class="mt-3 text-slate-600 max-w-3xl mx-auto">
+        Si estás en riesgo o te sientes muy mal, pide ayuda inmediata. Esta página no sustituye atención profesional.
+      </p>
+      <div class="mt-6 flex items-center justify-center gap-3 flex-wrap">
+        <a href="tel:911"
+           class="inline-flex items-center justify-center rounded-xl bg-rose-600 px-5 py-2.5 text-white font-semibold shadow hover:bg-rose-700">
+          Llamar a emergencias
+        </a>
+        <a routerLink="/ayuda"
+           class="inline-flex items-center justify-center rounded-xl bg-amber-500 px-5 py-2.5 text-white font-semibold shadow hover:bg-amber-600">
+          Centros de apoyo
+        </a>
+      </div>
+    </header>
+
+    <h2 class="text-xl font-bold text-rose-900 mb-4">¿Con qué necesitas ayuda?</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="p-6 bg-white/90 border border-rose-100 rounded-2xl shadow-sm hover:shadow transition">
+        <h3 class="font-bold text-rose-700 mb-2">Ansiedad / Estrés</h3>
+        <p class="text-slate-700">Respira 4–4–4, usa 5-4-3-2-1 (sentidos) y divide tareas en pasos de 10 min.</p>
+      </article>
+      <article class="p-6 bg-white/90 border border-amber-100 rounded-2xl shadow-sm hover:shadow transition">
+        <h3 class="font-bold text-amber-700 mb-2">Bullying</h3>
+        <p class="text-slate-700">No respondas con violencia, guarda evidencias y cuéntalo a un adulto/docente.</p>
+      </article>
+      <article class="p-6 bg-white/90 border border-rose-100 rounded-2xl shadow-sm hover:shadow transition">
+        <h3 class="font-bold text-rose-700 mb-2">Tristeza persistente</h3>
+        <p class="text-slate-700">Habla con alguien de confianza, plan de autocuidado y busca orientación.</p>
+      </article>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-2 gap-6">
+      <div class="p-6 bg-white border border-amber-100 rounded-2xl shadow">
+        <h3 class="font-semibold text-amber-700 mb-2">Si tengo un ataque de pánico</h3>
+        <ol class="list-decimal list-inside text-slate-700 space-y-1">
+          <li>Respira: 4 inhala, 4 sostén, 4 exhala (x3).</li>
+          <li>5-4-3-2-1 con tus sentidos.</li>
+          <li>Busca a un adulto y camina 5 min.</li>
+        </ol>
+      </div>
+      <div class="p-6 bg-rose-600 text-white rounded-2xl shadow">
+        <h3 class="font-semibold mb-2">Recuerda</h3>
+        <p class="opacity-95">Tu emoción es válida. No estás solo/a. Pedir ayuda es valentía.</p>
+      </div>
+    </div>
+
+    <div class="mt-10 p-6 bg-white border border-rose-100 rounded-2xl shadow">
+      <h3 class="text-lg font-semibold text-rose-800 mb-3">Preguntas frecuentes</h3>
+      <div class="space-y-3 text-slate-700">
+        <details class="rounded-lg border border-amber-100 p-3">
+          <summary class="font-medium cursor-pointer">¿Puedo pedir ayuda si soy menor?</summary>
+          <p class="mt-2 text-sm">Sí. Busca a un adulto de confianza u orientación escolar. También puedes escribirnos.</p>
+        </details>
+        <details class="rounded-lg border border-amber-100 p-3">
+          <summary class="font-medium cursor-pointer">¿Qué pasa con mis datos?</summary>
+          <p class="mt-2 text-sm">Son confidenciales y solo se usan para orientarte. Revisa la política de privacidad.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>

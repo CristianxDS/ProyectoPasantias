@@ -1,7 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-
+export interface Mensaje {  // ⬅️ debe llevar "export"
+  id: string;
+  contenido: string;
+  fecha: string; // ISO
+}
 @Injectable({
   providedIn: 'root'
 })

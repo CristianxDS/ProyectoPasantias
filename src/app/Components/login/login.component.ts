@@ -1,30 +1,39 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [CommonModule,RouterModule,FormsModule],
+  standalone:true,
+  imports: [CommonModule, FormsModule], // y este imports también
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+  usuario = '';
+  contrasena = '';
+  error = false;
+  private redirectTo = '/formulario'; // por defecto
 
-  usuario: string = '';
-  contrasena: string = '';
-  error: boolean = false;
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
-  constructor(private router: Router) {}
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      const to = params['to'];
+      if (typeof to === 'string' && to.trim()) {
+        this.redirectTo = to.startsWith('/') ? to : `/${to}`;
+      }
+    });
+  }
 
-  login() {
-    // Aquí puedes poner tus credenciales reales o hacer una llamada a tu backend
+  login(): void {
     if (this.usuario === 'admin' && this.contrasena === '1234') {
+      localStorage.setItem('isAdmin', 'true');
       this.error = false;
-      this.router.navigate(['/formulario']);
+      this.router.navigate([this.redirectTo]); // usa ?to=comunidad para moderar
     } else {
       this.error = true;
+      localStorage.removeItem('isAdmin');
     }
   }
 }
