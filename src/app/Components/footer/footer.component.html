@@ -39,35 +39,35 @@
         <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-white">Temas</h2>
         <ul class="space-y-2">
           <li class="relative group">
-            <a routerLink="/educacion" class="hover:text-slate-900 dark:hover:text-white transition">Educación emocional</a>
+            <a routerLink="/educacion" (click)="scrollTop()" class="hover:text-slate-900 dark:hover:text-white transition">Educación emocional</a>
             <span class="absolute left-0 right-0 -bottom-1 h-[2px] bg-indigo-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></span>
           </li>
           <li class="relative group">
-            <a routerLink="/autocuidado" class="hover:text-slate-900 dark:hover:text-white transition">Autocuidado</a>
+            <a routerLink="/autocuidado" (click)="scrollTop()" class="hover:text-slate-900 dark:hover:text-white transition">Autocuidado</a>
             <span class="absolute left-0 right-0 -bottom-1 h-[2px] bg-emerald-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></span>
           </li>
           <li class="relative group">
-            <a routerLink="/ansiedad" class="hover:text-slate-900 dark:hover:text-white transition">Ansiedad escolar</a>
+            <a routerLink="/ansiedad" (click)="scrollTop()" class="hover:text-slate-900 dark:hover:text-white transition">Ansiedad escolar</a>
             <span class="absolute left-0 right-0 -bottom-1 h-[2px] bg-violet-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></span>
           </li>
           <li class="relative group">
-            <a routerLink="/autoestima" class="hover:text-slate-900 dark:hover:text-white transition">Autoestima</a>
+            <a routerLink="/autoestima" (click)="scrollTop()" class="hover:text-slate-900 dark:hover:text-white transition">Autoestima</a>
             <span class="absolute left-0 right-0 -bottom-1 h-[2px] bg-amber-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></span>
           </li>
           <li class="relative group">
-            <a routerLink="/bullying" class="hover:text-slate-900 dark:hover:text-white transition">Prevención del bullying</a>
+            <a routerLink="/bullying" (click)="scrollTop()" class="hover:text-slate-900 dark:hover:text-white transition">Prevención del bullying</a>
             <span class="absolute left-0 right-0 -bottom-1 h-[2px] bg-rose-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></span>
           </li>
           <li class="relative group">
-            <a routerLink="/comunidad" class="hover:text-slate-900 dark:hover:text-white transition">Comunidad</a>
+            <a routerLink="/comunidad" (click)="scrollTop()" class="hover:text-slate-900 dark:hover:text-white transition">Comunidad</a>
             <span class="absolute left-0 right-0 -bottom-1 h-[2px] bg-sky-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></span>
           </li>
           <li class="relative group">
-            <a routerLink="/ayuda" class="hover:text-slate-900 dark:hover:text-white transition">Ayuda profesional</a>
+            <a routerLink="/ayuda" (click)="scrollTop()" class="hover:text-slate-900 dark:hover:text-white transition">Ayuda profesional</a>
             <span class="absolute left-0 right-0 -bottom-1 h-[2px] bg-cyan-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></span>
           </li>
           <li class="relative group">
-            <a routerLink="/talleres" class="hover:text-slate-900 dark:hover:text-white transition">Talleres</a>
+            <a routerLink="/talleres" (click)="scrollTop()" class="hover:text-slate-900 dark:hover:text-white transition">Talleres</a>
             <span class="absolute left-0 right-0 -bottom-1 h-[2px] bg-fuchsia-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></span>
           </li>
         </ul>
@@ -78,8 +78,8 @@
         <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-white">Recursos</h2>
 <ul class="space-y-2">
   <li class="relative group">
-    <a routerLink="/guiafamilias"
-       routerLinkActive="text-indigo-600"
+    <a routerLink="/guiafamilias" (click)="scrollTop()"
+       routerLinkActive="text-indigo-600" 
        [routerLinkActiveOptions]="{ exact: true }"
        class="hover:text-slate-900 dark:hover:text-white transition">
       Guía para familias
@@ -88,7 +88,7 @@
   </li>
 
   <li class="relative group">
-    <a routerLink="/materialdocente"
+    <a routerLink="/materialdocente" (click)="scrollTop()"
        routerLinkActive="text-emerald-600"
        [routerLinkActiveOptions]="{ exact: true }"
        class="hover:text-slate-900 dark:hover:text-white transition">
@@ -98,7 +98,7 @@
   </li>
 
   <li class="relative group">
-    <a routerLink="/privacidad"
+    <a routerLink="/privacidad" (click)="scrollTop()"
        routerLinkActive="text-slate-200"
        [routerLinkActiveOptions]="{ exact: true }"
        class="hover:text-slate-900 dark:hover:text-white transition">
@@ -108,7 +108,7 @@
   </li>
 
   <li class="relative group">
-    <a routerLink="/terminos"
+    <a routerLink="/terminos" (click)="scrollTop()"
        routerLinkActive="text-slate-200"
        [routerLinkActiveOptions]="{ exact: true }"
        class="hover:text-slate-900 dark:hover:text-white transition">

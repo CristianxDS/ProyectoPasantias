@@ -20,7 +20,7 @@ isOpen = false;
     this.isOpen = false;
   }
 
-  scrollTop(): void {
+  scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 

@@ -20,4 +20,8 @@ export class FooterComponent {
     this.router.navigateByUrl(path);
     return false; // opcional: evita que otro handler cancele
   }
+  scrollTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 }
